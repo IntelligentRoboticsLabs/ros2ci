@@ -15,8 +15,11 @@
 ARG FROM_IMAGE=osrf/ros2:devel-bionic
 FROM $FROM_IMAGE
 
-ARG ROS_DISTRO=foxy
+ARG ROS_DISTRO=eloquent
 ENV ROS_DISTRO=$ROS_DISTRO
+
+# X11
+ENV QT_X11_NO_MITSHM 1
 
 # install building tools
 RUN apt-get -qq update && \
@@ -25,9 +28,6 @@ RUN apt-get -qq update && \
     if [ -e /opt/ros/$ROS_DISTRO/setup.bash ]; then true; else apt-get -qq install ros-$ROS_DISTRO-ros-workspace -y; fi && \
     apt-get -qq install readline-common libreadline-dev -y && \
     rm -rf /var/lib/apt/lists/*
-
-## install X11 package
-RUN apt-get install libx11-dev
 
 ARG REPO_SLUG=repo/to/test
 ARG CI_FOLDER=.ros2ci
