@@ -13,7 +13,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-if [[ "$1" != "crystal" ]] && [[ "$1" != "dashing" ]] && [[ "$1" != "eloquent" ]] && [[ "$1" != "nightly" ]]; then
+if [[ "$1" != "crystal" ]] && [[ "$1" != "dashing" ]] && [[ "$1" != "eloquent" ]] && [[ "$1" != "foxy" ]] && [[ "$1" != "nightly" ]]; then
   echo "'$1' distro not supported"
   exit -1;
 elif [[ "$1" == "nightly" ]]; then
