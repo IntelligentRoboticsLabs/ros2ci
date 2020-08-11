@@ -1,17 +1,10 @@
 repositories:
-  BehaviorTree.CPP:
-    type: git
-    url: https://github.com/BehaviorTree/BehaviorTree.CPP.git
-    version: master
-  roslib:
-    type: git
-    url: https://github.com/ros/ros.git
-    version: 1.14.7
-  BICA:
-    type: git
-    url: https://github.com/IntelligentRoboticsLabs/BICA.git
-    version: behavior_trees
   navigation2:
     type: git
     url: https://github.com/MROS-RobMoSys-ITP/navigation2.git
     version: pilot-urjc
+
+  ros2_knowledge_graph:
+    type: git
+    url: https://github.com/fmrico/ros2_knowledge_graph
+    version: master
